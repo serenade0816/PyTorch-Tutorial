@@ -21,7 +21,7 @@ loader = Data.DataLoader(
     dataset=torch_dataset,      # torch TensorDataset format
     batch_size=BATCH_SIZE,      # mini batch size
     shuffle=True,               # random shuffle for training
-    num_workers=2,              # subprocesses for loading data
+    # num_workers=2,            # subprocesses for loading data， but cause endless loop
 )
 
 for epoch in range(3):   # train entire dataset 3 times
